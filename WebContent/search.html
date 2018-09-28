@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+    <!-- Using jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+    
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+<form action="SearchServlet" method="get">
+    Title: <input type="text" name="title" id="autocomplete"><br>
+	Year: <input type="text" name="year"><br>
+	Director: <input type="text" name="director"><br>
+	Star's Name: <input type="text" name="starName"><br>
+    <input type="submit" value="Search">
+</form>
+
+
+<script src="search.js"></script>
+</body>
+</html>

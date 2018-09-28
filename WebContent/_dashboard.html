@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+</head>
+
+<body>
+<h1>Employee Dashboard</h1>
+
+<!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
+<!-- single-star.js will find this html element by it's id "star_info" -->
+<h3 id="star_info"></h3>
+<table class="table" id = "table1">
+  <tbody id = "metadata">
+  <tr>
+  <td>
+  <a href="_dashboardMetadeta.html">Show Metadata</a>
+  </td>
+  </tr>
+  </tbody>
+</table>
+    <!--  Tried to do a drop down button here, but it button only shows the options never hides it. 
+    If you wanna try to fix it: uncomment this and line 95-115 in movie_list.js Going into JS console,
+    you'll see the #sortByList.show toggling, but not changing dunnoooo whyyyy
+    	<div class="dropdown">
+  		<button onclick="myFunction()" class="dropbtn">Movie Title</button>
+  		<div class="dropdown-content" id="sortByTitle">
+  		</div>
+		</div>
+	-->
+<form action="InsertStarServlet" method="get">
+    Star's Name: <input type="text" name="starName" required><br>
+	Birth Year: <input type="text" name="birthYear"><br>
+    <input type="submit" value="Add Star">
+</form>
+
+<form action="AddMovieServlet" method="get">
+	Movie Title: <input type="text" name="movieTitle" required><br>
+	Movie Year: <input type="text" name="movieYear" required><br>
+	Movie Director: <input type="text" name="movieDirector" required><br>
+	Star Name: <input type="text" name="starName" required><br>
+	Genre Name: <input type="text" name="genreName" required><br>
+	<input type="submit" value="Add Movie">
+</form>
+
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="add_movie.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to single-star.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+</body>
+</html>

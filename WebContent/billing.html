@@ -1,0 +1,36 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+</head>
+<body>
+<h2>Please enter your card information</h2>
+<!-- Set the method to POST to avoid username/password showing on URL
+     Disable the default action because our JS function will handle it. -->
+<form id="billing_form" method="post" action="#">
+    <label><b>ID</b></label>
+    <input type="text" placeholder="Enter credit card number" name="cardid">
+    <br>
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="First Name" name="firstname">
+    <br>
+    <label><b>Last Name</b></label>
+    <input type="text" placeholder="Last Name" name="lastname">
+    <br>
+    <label><b>Expiration Date</b></label>
+    <input type="date" placeholder="Expiration" name="edate">
+    <br>
+    <input type="submit" value="Submit!">
+</form>
+
+<div id="login_error_message"></div>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./billing.js"></script> 
+
+</body>
+</html>

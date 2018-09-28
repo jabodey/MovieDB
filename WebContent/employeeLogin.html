@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login to Fablix</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<h2>Login to Fablix</h2>
+<form id="login_form" method="post" action="#">
+    <label><b>Employee Username</b></label>
+    <input type="text" placeholder="Enter Username" name="employee">
+    <br>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password">
+    <br>  
+    <div class="g-recaptcha" data-sitekey="6LdT11cUAAAAALpnEgS37Xo62uaIo7T7dUj5k_H2"></div>
+    <input type="submit" value="Login"> 
+</form>
+<a href="login.html">User Login</a>
+<div id="login_error_message"></div>
+<div id="g_error_message"></div>
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./login.js"></script> 
+
+</body>
+</html>
